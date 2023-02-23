@@ -5,7 +5,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 
 import { fadeEffect } from './js/preloader';
-import { fetchImages } from './js/fetchImages';
+import { fetchImages } from './js/fetchimages';
 
 const searchQuery = document.querySelector('input[name="searchQuery"]');
 const closeBtn = document.querySelector('.close-btn');
