@@ -1,16 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
-  </head>
-  <body>
-    <input type="text" id="search-box" />
-    <ul class="country-list"></ul>
-    <div class="country-info"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="search-container">
+        <div class="logo">
+          <img src="./images/pixabay-logo-small.png" alt="Pixabay-logo" />
+        </div>
+      
+        <form class="search-container__form" id="search-form">
+          <input type="text" name="searchQuery" autocomplete="off" />
+          <button
+            class="search-btn material-symbols-outlined"
+            type="submit"
+            name="submitBtn"
+          >
+            search
+          </button>
+        </form>
+      </div>
+      <div class="gallery"></div>
+      <div class="btn-container">
+        <button type="button" class="load-more material-symbols-outlined">
+          more
+        </button>
+        <button type="button" class="close-btn material-symbols-outlined">
+          close
+        </button>
+      </div>
+      <div class="preloader">
+        <svg
+          width="200"
+          height="200"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+          class="lds-ripple"
+          style="background: 0 0"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="4.719"
+            fill="none"
+            stroke="#1d3f72"
+            stroke-width="2"
+          >
+            <animate
+              attributeName="r"
+              calcMode="spline"
+              values="0;40"
+              keyTimes="0;1"
+              dur="3"
+              keySplines="0 0.2 0.8 1"
+              begin="-1.5s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="opacity"
+              calcMode="spline"
+              values="1;0"
+              keyTimes="0;1"
+              dur="3"
+              keySplines="0.2 0 0.8 1"
+              begin="-1.5s"
+              repeatCount="indefinite"
+            />
+          </circle>
+          <circle
+            cx="50"
+            cy="50"
+            r="27.591"
+            fill="none"
+            stroke="#5699d2"
+            stroke-width="2"
+          >
+            <animate
+              attributeName="r"
+              calcMode="spline"
+              values="0;40"
+              keyTimes="0;1"
+              dur="3"
+              keySplines="0 0.2 0.8 1"
+              begin="0s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="opacity"
+              calcMode="spline"
+              values="1;0"
+              keyTimes="0;1"
+              dur="3"
+              keySplines="0.2 0 0.8 1"
+              begin="0s"
+              repeatCount="indefinite"
+            />
+          </circle>
+        </svg>
+      </div>
 
-    <script src="index.js" type="module"></script>
-  </body>
+    <script type="module" src="./index.js"></script>
+</body>
 </html>
