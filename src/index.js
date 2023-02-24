@@ -26,7 +26,12 @@ async function eventHandler(e) {
   loadBtn.style.display = 'none';
 
   page = 1;
-  name = searchQuery.value;
+  name = searchQuery.value.trim();
+
+  if (name === '' || name === null) {
+    Notiflix.Notify.failure('Please enter your search query!');
+    return;
+  }
 
   fetchImages(name, page, perPage)
     .then(name => {
@@ -110,6 +115,7 @@ loadBtn.addEventListener(
   () => {
     name = searchQuery.value;
     page += 1;
+
     fetchImages(name, page, perPage).then(name => {
       let totalPages = name.totalHits / perPage;
       renderGallery(name);
@@ -127,4 +133,4 @@ loadBtn.addEventListener(
 
 window.addEventListener('load', fadeEffect);
 
-console.log('Hello!');
+console.log('Hell');
